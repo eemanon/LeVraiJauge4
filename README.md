@@ -9,3 +9,11 @@ Elle comporte à cette heure 5 fichiers javas, dont deux interfaces privés, deux 
 
 La contrainte physique pour les classes appartenant au paquetage tec est la suivante:
 Si une classe n'est pas déclarée explicitement public elle n'est pas visible et accessible en dehors de son paquetage.
+
+Le but des interfaces privées est d'assurer qu'une classe qui implemente ces interfaces possede les fonctions
+définies. On les met privée car les fonctions définies ne sont pas directement rélevant pour l'utilisateur
+du paquetage mais servent de guide à comment implementer le fonctionnement de l'interface publique.
+
+## 1.2 Compilons l'existant
+La classe autobus depend des interfaces Bus et Transport, la classe PassagerStandard de Usager et Passager.
+Puis, la classe Autobus utilise la classe PassagerStandard et vice versa.
