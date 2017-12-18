@@ -28,10 +28,10 @@ public class Autobus implements Bus, Transport{
 	} 
   
 	@Override
-	public void demanderPlaceAssise(Passager p) {
-		if(p.estDehors() && bus.length<this.tailleMax && this.aPlaceAssise()) {
-			this.bus[bus.length+1]=p;
-			p.accepterPlaceAssise();
+	public void demanderPlaceAssise(Passager p2) {
+		if(p2.estDehors() && bus.length<this.tailleMax && this.aPlaceAssise()) {
+			this.bus[bus.length+1]=p2;
+			p2.accepterPlaceAssise();
 			this.assis--;
 		}
 	}	
