@@ -3,15 +3,20 @@ package tec;
 public class Autobus implements Bus, Transport{
 /** assis est le nombre de places assises libres.
  * debout est le nombre de places debouts libres
+ * 
  */
 	int assis;
 	int debout;
+	int tailleMax;
+	Passager bus[];
 	
 	public Autobus(int i, int j) {
 		this.assis=i;
 		this.debout=j;
+		this.tailleMax = i+j
+		bus[]= new Passager[tailleMax];
 	}
-
+ 
 	@Override
 	public boolean aPlaceAssise() {
 		return this.assis>0;
@@ -24,14 +29,27 @@ public class Autobus implements Bus, Transport{
   
 	@Override
 	public void demanderPlaceAssise(Passager p) {
-		p.accepterPlaceAssise();
-		this.assis++;
+		EtatPassager etat = p.getEtat();
+		if(etat == DEHORS && bus.length<this.tailleMax) {
+			this.bus[bus.length+1]=p;
+			if(this.aPlaceAssise()) {
+				p.accepterPlaceAssise();
+				this.assis--;
+			}
+		}	
 	}
 
 	@Override
 	public void demanderPlaceDebout(Passager p) {
-		p.accepterPlaceDebout();
-		this.debout++; 
+		EtatPassager etat = p.getEtat();
+		if(etat == DEHORS) {
+			this.bus[bus.length+1]=p;
+			if(this.aPlaceDebout()) {
+				p.accepterPlaceDebout();
+				this.debout--; 
+			}
+		}	
+		
 	}
 
 	@Override
