@@ -81,7 +81,7 @@ public class Autobus implements Bus, Transport{
 		this.arret++;
 		if(arret>nbArret)
 			arret=0; //le bus est au terminus et reprend un cycle.
-		for(int i=0;i<=(tailleMax-(assis+debout));i++){
+		for(int i=0;i<(tailleMax-(assis+debout));i++){
 			bus[i].nouvelArret(this, this.arret);
 		}		
 	}
