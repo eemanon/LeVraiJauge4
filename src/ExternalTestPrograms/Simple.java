@@ -78,6 +78,7 @@ class Simple {
   }
 }
 
+
 /* Resultat de l'execution.
 [arret:1, assis:0, debout:0]
 [arret:2, assis:1, debout:1]

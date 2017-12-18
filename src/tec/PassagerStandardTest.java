@@ -59,12 +59,12 @@ public class PassagerStandardTest implements Transport{
 			System.out.println("OMG il ne peut pas monter dans le bus plein!!!!");
 		}		
 		PassagerStandard petitpotter = new PassagerStandard("Harry", 0);
-		FauxBusDebout busdePuddlar = new FauxBusDebout();
+		FauxBusDebout busdePoudlard = new FauxBusDebout();
 		try {
-			petitpotter.monterDans(busdePuddlar);
+			petitpotter.monterDans(busdePoudlard);
 			assert(!petitpotter.estDehors());
 		} catch (UsagerInvalideException e) {
-			System.out.println("tout le monde est debout et refuse de laisser Harry monter et voyager a Puddlar.");
+			System.out.println("tout le monde est debout et refuse de laisser Harry monter et voyager a Poudlard.");
 		}		
 		PassagerStandard madameBilleEnTete  = new PassagerStandard("Valerie", 0);
 		FauxBusAssis busmagique = new FauxBusAssis();
@@ -78,9 +78,18 @@ public class PassagerStandardTest implements Transport{
 	
 	@Test
 	public void nouvelArret() {
-		Passager p1 = new PassagerStandard("Frédéric", 0);
-		p1.accepterSortie();
+		Passager p1 = new PassagerStandard("Cathérine", 0);
+		p1.nouvelArret(new FauxBusVide(), 0);
 		assert(p1.estDehors());
+		Passager p2 = new PassagerStandard("Emmanuel", 0);
+		p2.nouvelArret(new FauxBusAssis(), 0);
+		assert(p2.estDehors());
+		Passager p3 = new PassagerStandard("Brahim", 0);
+		p3.nouvelArret(new FauxBusDebout(), 0);
+		assert(p3.estDehors());
+		Passager p4 = new PassagerStandard("Thierry", 0);
+		p4.nouvelArret(new FauxBusPlein(), 0);
+		assert(p4.estDehors());		
 	}
 
 	@Override

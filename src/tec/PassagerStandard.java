@@ -64,11 +64,9 @@ public class PassagerStandard implements Passager, Usager{
 	@Override
 	public void monterDans(Transport t) throws UsagerInvalideException {
 		
-		
 	}
 	@Override
 	public String toString() {
 		return nom+" "+etat.toString();
 	}
-
 }
