@@ -23,13 +23,13 @@ interface Bus {
    * vrai s'il existe des places assises.
    * @return vrai s'il existe des places assises
    */
-  public boolean aPlaceAssise();
+  public boolean aPlaceAssise()  throws IllegalStateException;
 
   /**
    * vrai s'il existe des places debouts.
    * @return vrai s'il existe des places debouts
    */
-  public boolean aPlaceDebout();
+  public boolean aPlaceDebout() throws IllegalStateException;
 
   /**
    * Le passager entre dans ce bus en demandant une place assise.
@@ -37,7 +37,7 @@ interface Bus {
    * Cette méthode est appelée par Passager.
    * @param p le passager
    */
-  public void demanderPlaceAssise(Passager p);
+  public void demanderPlaceAssise(Passager p) throws IllegalArgumentException;
   /**
    * Le passager entre dans ce bus en demandant une place debout.
    * L'état du passager est forcément dehors.
@@ -53,20 +53,20 @@ interface Bus {
    * Elle change l'état du passager.
    * @param p le passager avec un état assis.
    */
-  public void demanderChangerEnDebout(Passager p);
+  public void demanderChangerEnDebout(Passager p) throws IllegalArgumentException;
 
   /**
    * Change un passager d'une place debout vers une place assise.
    * Elle change l'état du passager.
    * @param p le passager avec un état debout.
    */
-  public void demanderChangerEnAssis(Passager p);
+  public void demanderChangerEnAssis(Passager p) throws IllegalArgumentException;
 
   /**
    * Fait sortir un passager du bus.
    * Elle change l'état du passager.
    * @param p le passager avec un état soit assis soit debout.
    */
-  public void demanderSortie(Passager p);
+  public void demanderSortie(Passager p) throws IllegalArgumentException;
 }
 

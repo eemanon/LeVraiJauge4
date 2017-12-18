@@ -25,7 +25,7 @@ public class Autobus implements Bus, Transport{
 	}
  
 	@Override
-	public boolean aPlaceAssise() {
+	public boolean aPlaceAssise {
 		return this.assis>0;
 	}
 

@@ -31,35 +31,35 @@ interface Passager {
    * Retourne vrai si le passager est hors du bus.
    * @return vrai si le passager est hors du bus.
    */
-  public boolean estDehors();
+  public boolean estDehors() throws IllegalStateException;
   /**
    * Retourne vrai si le passager est assis dans le bus.
    * @return vrai si le passager est assis dans le bus.
    */
-  public boolean estAssis();
+  public boolean estAssis() throws IllegalStateException;
   /**
    * Retourne vrai si le passager est debout dans le bus.
    * @return vrai si le passager est debout dans le bus.
    */
-  public boolean estDebout();
+  public boolean estDebout() throws IllegalStateException;
 
   /**
    * Change l'état du passager en hors du bus.
    * Cette méthode est appelée par un objet Bus.
    */
-  public void accepterSortie();
+  public void accepterSortie() throws IllegalStateException;
   /**
    * Change l'état du passager en assis. 
    * Le passager est dans le bus.
    * Cette méthode est appelée par un objet Bus.
    */
-  public void accepterPlaceAssise();
+  public void accepterPlaceAssise() throws IllegalStateException;
   /**
    * Change l'état du passager en debout.
    * Le passager est dans le bus.
    * Cette méthode est appelée par un objet Bus.
    */
-  public void accepterPlaceDebout();
+  public void accepterPlaceDebout() throws IllegalStateException;
 
   /**
    * Indique au passager qu'il est arrivé à un nouvel arrêt. Cette methode
