@@ -17,3 +17,6 @@ du paquetage mais servent de guide à comment implementer le fonctionnement de l'
 ## 1.2 Compilons l'existant
 La classe autobus depend des interfaces Bus et Transport, la classe PassagerStandard de Usager et Passager.
 Puis, la classe Autobus utilise la classe PassagerStandard et vice versa.
+
+## 1.3 Ajouter les classes au paquetage
+C'est fait...
