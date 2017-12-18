@@ -8,10 +8,16 @@ package tec;
 public class FauxBusPlein implements Transport, Bus{
   String message = "???";
 
+  /** 
+   * étant plein, il renvoie faux.
+   */
   public boolean aPlaceAssise() {
     return false;
   }
 
+  /** 
+   * étant plein, il renvoie faux.
+   */
   public boolean aPlaceDebout() {
     return false;
   }

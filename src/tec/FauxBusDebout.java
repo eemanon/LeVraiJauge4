@@ -9,10 +9,15 @@ package tec;
 class FauxBusDebout implements Transport, Bus{
   String message = "???";
 
+  /** 
+   * ne contenant que des places debout, il renvoie faux.
+   */
   public boolean aPlaceAssise() {
     return false;
   }
-
+  /** 
+   * ne contenant que des places debout, il renvoie vrai.
+   */
   public boolean aPlaceDebout() {
     return true;
   }

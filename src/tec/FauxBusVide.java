@@ -8,10 +8,15 @@ package tec;
 class FauxBusVide implements Transport, Bus{
   String message = "???";
  
+ /** 
+  * ne contenant que des places assises, il renvoie vrai.
+  */
   public boolean aPlaceAssise() {
     return true;
   }
-
+  /** 
+   * ne contenant que des places assises, il renvoie faux.
+   */
   public boolean aPlaceDebout() {
     return true;
   }
