@@ -52,7 +52,7 @@ interface Passager {
    * Change l'état du passager en assis. 
    * Le passager est dans le bus.
    * Cette méthode est appelée par un objet Bus.
-   */
+   */ 
   public void accepterPlaceAssise();
   /**
    * Change l'état du passager en debout.
