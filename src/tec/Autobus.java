@@ -22,7 +22,7 @@ public class Autobus implements Bus, Transport{
 		return this.assis>0;
 	}
 
-	@Override
+	@Override 
 	public boolean aPlaceDebout() {
 		return this.debout>0; 
 	}
