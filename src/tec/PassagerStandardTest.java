@@ -12,8 +12,6 @@ public class PassagerStandardTest {
 	
 	@Before
 	public void initialiser() throws Exception{
-		
-		
 	}
 	
 	@After
