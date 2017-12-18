@@ -88,8 +88,27 @@ public class Autobus implements Bus, Transport{
 	
 	@Override
 	public String toString() {
-		return "nombre de places assises : "+assis+" - nombre de places debout : "+debout;
+		return "[arret:"+this.arret+ ", assis:"+assis+", debout:"+debout+"]";
 	}
 
+
+/* Resultat de l'execution.
+[arret:1, assis:0, debout:0]
+[arret:2, assis:1, debout:1]
+Kaylee assis
+Jayne debout
+[arret:3, assis:1, debout:2]
+Kaylee assis
+Jayne debout
+Inara debout
+[arret:4, assis:1, debout:1]
+Kaylee assis
+Jayne dehors
+Inara debout
+[arret:5, assis:0, debout:0]
+Kaylee dehors
+Jayne dehors
+Inara dehors
+*/
 
 }

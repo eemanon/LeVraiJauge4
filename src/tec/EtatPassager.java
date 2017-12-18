@@ -93,6 +93,6 @@ public class EtatPassager implements IEtatPassager{
    */
   @Override
   public String toString() {
-    return "<" + monEtat + ">";
+    return monEtat+"";
   }
 }

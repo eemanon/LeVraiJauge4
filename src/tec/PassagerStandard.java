@@ -9,6 +9,8 @@ public class PassagerStandard implements Passager, Usager{
 	
 	public PassagerStandard(String string, int i) {
 		etat = EtatPassager.creerEtatPassager(Etat.DEHORS);
+		this.nom = string;
+		this.destination = i;
 	}
 
 	@Override
