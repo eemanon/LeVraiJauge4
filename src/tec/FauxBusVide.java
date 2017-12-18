@@ -1,7 +1,7 @@
 package tec;
 
 
-public class FauxBusVide {
+class FauxBusVide {
   String message = "???";
 
   boolean aPlaceAssise() {
