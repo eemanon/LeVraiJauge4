@@ -7,8 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class AutobusTestFauxPassager {
-
-
 	Autobus a1;
 	Autobus a2;
 	Autobus a3;
@@ -94,7 +92,5 @@ public class AutobusTestFauxPassager {
 		a3.demanderSortie(p3);
 		assert(p3.estDehors());
 	}
-
-
 
 }
