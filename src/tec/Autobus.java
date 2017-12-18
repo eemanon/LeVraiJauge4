@@ -61,7 +61,7 @@ public class Autobus implements Bus, Transport{
 	}
 
 	@Override
-	public void demanderChangerEnAssis(Passager p) {
+	public void demanderChangerEnAssis(Passager p) { 
 		p.accepterPlaceAssise();		
 		this.assis--;
 		this.debout++;
