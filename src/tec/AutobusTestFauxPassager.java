@@ -2,6 +2,11 @@ package tec;
 
 import static org.junit.Assert.*;
 
+/**
+ * jeu de test pour la classe autobus.
+ * avec faux passagers pour étudier les tests sur autobus.
+ */
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

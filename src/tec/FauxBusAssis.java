@@ -1,5 +1,9 @@
 package tec;
-
+/**
+ * Cette classe est un substitut de autobus pour tester la classe autobus.
+ * son utilite se justifie par le fait qu'elle enlève les erreurs liées au code de passager
+ * il est composé de places assises dans ce cas
+ */
 
 class FauxBusAssis implements Transport, Bus{
   String message = "???";

@@ -2,6 +2,10 @@ package tec;
 
 import static org.junit.Assert.*;
 
+/**
+ * jeu de test pour la classe Autobus. elle fait appel à des passagers standards pour vérifier que les deux fonctionnent bien ensemble.
+ */
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

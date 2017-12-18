@@ -1,14 +1,23 @@
 package tec;
 
-
+/**
+ * Cette classe est un substitut de autobus pour tester la classe autobus.
+ * son utilite se justifie par le fait qu'elle enlève les erreurs liées au code de passager
+ * il est composé de places debout dans ce cas
+ */
 
 class FauxBusDebout implements Transport, Bus{
   String message = "???";
 
+  /** 
+   * ne contenant que des places debout, il renvoie faux.
+   */
   public boolean aPlaceAssise() {
     return false;
   }
-
+  /** 
+   * ne contenant que des places debout, il renvoie vrai.
+   */
   public boolean aPlaceDebout() {
     return true;
   }
