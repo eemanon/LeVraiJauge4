@@ -2,49 +2,53 @@ package tec;
 
 public class Autobus implements Bus, Transport{
 
+	int assis;
+	int debout;
+	
 	public Autobus(int i, int j) {
-		// TODO Auto-generated constructor stub
+		this.assis=i;
+		this.debout=j;
 	}
 
 	@Override
 	public boolean aPlaceAssise() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.assis>0;
 	}
 
 	@Override
 	public boolean aPlaceDebout() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.debout>0;
 	}
 
 	@Override
 	public void demanderPlaceAssise(Passager p) {
-		// TODO Auto-generated method stub
-		
+		p.accepterPlaceAssise();
+		this.assis++;
 	}
 
 	@Override
 	public void demanderPlaceDebout(Passager p) {
-		// TODO Auto-generated method stub
-		
+		p.accepterPlaceDebout();
+		this.debout++;
 	}
 
 	@Override
 	public void demanderChangerEnDebout(Passager p) {
-		// TODO Auto-generated method stub
-		
+		p.accepterPlaceDebout();
+		this.assis++;
+		this.debout--;
 	}
 
 	@Override
 	public void demanderChangerEnAssis(Passager p) {
-		// TODO Auto-generated method stub
-		
+		p.accepterPlaceAssise();		
+		this.assis--;
+		this.debout++;
 	}
 
 	@Override
 	public void demanderSortie(Passager p) {
-		// TODO Auto-generated method stub
+		p.accepterSortie();
 		
 	}
 
