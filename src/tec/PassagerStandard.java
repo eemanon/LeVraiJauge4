@@ -1,7 +1,10 @@
 package tec;
 
 public class PassagerStandard implements Passager, Usager{
-
+	private EtatPassager etat;
+	private String nom;
+	private int destination;
+	
 	public PassagerStandard(String string, int i) {
 		// TODO Auto-generated constructor stub
 	}
@@ -61,7 +64,7 @@ public class PassagerStandard implements Passager, Usager{
 	}
 	@Override
 	public String toString() {
-		return "samere";
+		return nom+" "+etat.toString();
 	}
 
 }

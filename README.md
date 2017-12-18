@@ -20,3 +20,12 @@ Puis, la classe Autobus utilise la classe PassagerStandard et vice versa.
 
 ## 1.3 Ajouter les classes au paquetage
 C'est fait...
+
+## 1.4 Compilons les nouvelles classes
+Stubs de méthodes créée
+
+## 1.5 Fin Iteration
+vérifié
+
+# 2 Deuxième Iteration: Instancation et Changement d'état
+Méthodes toString implémenté pour Autobus et PassagerStandard
