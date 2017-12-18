@@ -36,8 +36,8 @@ public class Autobus implements Bus, Transport{
   
 	@Override
 	public void demanderPlaceAssise(Passager p2) {
-		if(p2.estDehors() && bus.length<this.tailleMax && this.aPlaceAssise()) {
-			this.bus[bus.length+1]=p2;
+		if(p2.estDehors() && this.aPlaceAssise()) {
+			this.bus[tailleMax-(assis+debout)]=p2;
 			p2.accepterPlaceAssise();
 			this.assis--;
 		}
@@ -45,8 +45,8 @@ public class Autobus implements Bus, Transport{
 
 	@Override
 	public void demanderPlaceDebout(Passager p) {
-		if(p.estDehors() && bus.length<this.tailleMax && this.aPlaceDebout()) {
-			this.bus[bus.length+1]=p;
+		if(p.estDehors() && this.aPlaceDebout()) {
+			this.bus[tailleMax-(assis+debout)]=p;
 			p.accepterPlaceDebout();
 			this.debout--; 
 		}	
@@ -79,13 +79,10 @@ public class Autobus implements Bus, Transport{
 	@Override
 	public void allerArretSuivant() throws UsagerInvalideException {
 		this.arret++;
-		if(arret<nbArret)
+		if(arret>nbArret)
 			arret=0; //le bus est au terminus et reprend un cycle.
-		for(int i=0;i<this.bus.length;i++){
-			int destination = bus[i].getDestination();
-			if(destination == arret)	{
-				this.demanderSortie(bus[i]);
-			}
+		for(int i=0;i<=(tailleMax-(assis+debout));i++){
+			bus[i].nouvelArret(this, this.arret);
 		}		
 	}
 	

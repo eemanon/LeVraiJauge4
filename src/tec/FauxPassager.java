@@ -45,10 +45,4 @@ class FauxPassager implements Passager {
 
   public void monterDans(Transport t) { // throws UsagerInvalideException {
   }
-
-  @Override
-	public int getDestination() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }
