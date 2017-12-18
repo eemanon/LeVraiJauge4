@@ -17,7 +17,7 @@ public class Autobus implements Bus, Transport{
 
 	@Override
 	public boolean aPlaceDebout() {
-		return this.debout>0;
+		return this.debout>0; 
 	}
  
 	@Override
