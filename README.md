@@ -34,3 +34,10 @@ Méthodes toString implémenté pour Autobus et PassagerStandard
 Pour vérifier la cohérence des états après instanciation il suffit de tester un seul passager. Son état est Dehors lors de son initialisation (selon la spécification dans l'interface).
 
 Pour vérifier le changement des états on peut revérifier son état après chaque appel de modificateur.
+
+
+# 3 Troisième itération: Interaction et stockage des passagers
+# 3.1 Les classes faussaires
+La condition à laquelle une instance de FauxPassager peut être remplacé par une instance de PassagerStandard est la suivante:
+Elle doit implementer les mêmes interfaces.
+
