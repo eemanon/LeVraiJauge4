@@ -1,7 +1,9 @@
 package tec;
 
 public class Autobus implements Bus, Transport{
-
+/** assis est le nombre de places assises libres.
+ * debout est le nombre de places debouts libres
+ */
 	int assis;
 	int debout;
 	
@@ -19,7 +21,7 @@ public class Autobus implements Bus, Transport{
 	public boolean aPlaceDebout() {
 		return this.debout>0; 
 	}
- 
+  
 	@Override
 	public void demanderPlaceAssise(Passager p) {
 		p.accepterPlaceAssise();
@@ -48,8 +50,12 @@ public class Autobus implements Bus, Transport{
 
 	@Override
 	public void demanderSortie(Passager p) {
+		EtatPassager etat = p.getEtat();
+		if(etat == DEBOUT)
+		    this.debout++;
+		else
+			this.assis++;
 		p.accepterSortie();
-		
 	}
 
 	@Override
