@@ -59,7 +59,7 @@ public class Autobus implements Bus, Transport{
 	}
 	@Override
 	public String toString() {
-		return "sarace";
+		return "nombre de places assises : "+assis+" - nombre de places debout : "+debout;
 	}
 
 
