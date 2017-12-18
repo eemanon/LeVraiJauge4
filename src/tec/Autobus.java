@@ -3,18 +3,25 @@ package tec;
 public class Autobus implements Bus, Transport{
 /** assis est le nombre de places assises libres.
  * debout est le nombre de places debouts libres
- * 
+ * tailleMax est la capacité du bus
+ * bus[] est un tableau de passagers
+ * nbArret est le nombre d'arrets de la ligne
+ * arret est l'arret courant.
  */
 	int assis;
 	int debout;
 	int tailleMax;
 	Passager bus[];
+	int nbArret;
+	int arret;
 	
 	public Autobus(int i, int j) {
 		this.assis=i;
 		this.debout=j;
 		this.tailleMax = i+j;
 		bus = new Passager[tailleMax];
+		nbArret=15;
+		arret=0;
 	}
  
 	@Override
@@ -71,7 +78,16 @@ public class Autobus implements Bus, Transport{
 
 	@Override
 	public void allerArretSuivant() throws UsagerInvalideException {
-		// TODO Auto-generated method stub
+		this.arret++;
+		if(arret<nbArret)
+			arret=0; //le bus est au terminus et reprend un cycle.
+		for(int i=0;i<this.bus.length;i++){
+			destination = bus[i].getDestination();
+			if(destination == arret)	{
+				this.demanderSortie(bus[i]);
+			}
+		}
+		
 		
 	}
 	@Override
