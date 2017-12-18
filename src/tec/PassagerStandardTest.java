@@ -5,7 +5,10 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+/**
+ * jeu de test pour la classe passager standard.
+ * il fait appelle à des faux bus pour éviter que les erreurs de bus n'interfèrent dans les tests.
+ */
 import tec.EtatPassager.Etat;
 
 class PassagerStandardTest implements Transport{

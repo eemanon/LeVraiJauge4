@@ -1,5 +1,9 @@
 package tec;
-
+/**
+ * Cette classe est un substitut de autobus pour tester la classe autobus.
+ * son utilite se justifie par le fait qu'elle enlève les erreurs liées au code de passager
+ * il est plein dans ce cas
+ */
 
 public class FauxBusPlein implements Transport, Bus{
   String message = "???";
