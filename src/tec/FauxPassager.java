@@ -37,6 +37,7 @@ class FauxPassager implements Passager {
   public void accepterPlaceDebout() {
     message = ":accepterPlaceDebout:";
   }
+  
 
   public void nouvelArret(Bus bus, int numeroArret) {
     message = ":nouvelArret " + numeroArret + ":";
@@ -44,4 +45,10 @@ class FauxPassager implements Passager {
 
   public void monterDans(Transport t) { // throws UsagerInvalideException {
   }
+
+  @Override
+	public int getDestination() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

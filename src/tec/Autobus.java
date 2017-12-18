@@ -82,14 +82,13 @@ public class Autobus implements Bus, Transport{
 		if(arret<nbArret)
 			arret=0; //le bus est au terminus et reprend un cycle.
 		for(int i=0;i<this.bus.length;i++){
-			destination = bus[i].getDestination();
+			int destination = bus[i].getDestination();
 			if(destination == arret)	{
 				this.demanderSortie(bus[i]);
 			}
-		}
-		
-		
+		}		
 	}
+	
 	@Override
 	public String toString() {
 		return "nombre de places assises : "+assis+" - nombre de places debout : "+debout;
