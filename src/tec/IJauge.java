@@ -6,7 +6,7 @@ import tec.Placeholder;
  * interface pour lier les classes de jauge entre elles
  */
 
-public interface IJauge {
+interface IJauge {
 	public boolean estRouge();
 	public boolean estVert();
 	public boolean estBleu();

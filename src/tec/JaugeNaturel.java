@@ -18,7 +18,7 @@ package tec;
  * @author georgy
  * @since 2006-2007
  */
-public class JaugeNaturel implements IJauge{
+class JaugeNaturel implements IJauge{
   private long valeur;
   private final long min;
   private final long max;

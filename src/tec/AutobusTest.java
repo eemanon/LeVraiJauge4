@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class AutobusTest {
+class AutobusTest {
 
 	Autobus a1;
 	Autobus a2;

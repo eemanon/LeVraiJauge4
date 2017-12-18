@@ -11,12 +11,8 @@ package ExternalTestPrograms;
 import tec.Usager;
 import tec.Transport;
 import tec.UsagerInvalideException;
-
-import tec.*;
-
-import tec.PassagerStandard;
 import tec.Autobus;
-
+import tec.PassagerStandard;
 /*
  * Exemple de programme principale avec trois PassagerStandard et un Autobus.
  */

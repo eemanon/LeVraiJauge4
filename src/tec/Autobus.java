@@ -23,9 +23,12 @@ public class Autobus implements Bus, Transport{
 		nbArret=15;
 		arret=0;
 	}
+	public Autobus(int nbPlaces) {
+		this(nbPlaces, nbPlaces);
+	}
  
 	@Override
-	public boolean aPlaceAssise {
+	public boolean aPlaceAssise() {
 		return this.assis>0;
 	}
 
@@ -99,4 +102,8 @@ public class Autobus implements Bus, Transport{
 		
 		return "[arret:"+this.arret+ ", assis:"+seated+", debout:"+standing+"]";
 	}
+
+
+
+
 }

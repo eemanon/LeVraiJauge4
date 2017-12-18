@@ -17,7 +17,9 @@ public class PassagerStandard implements Passager, Usager{
 		this.nom = string;
 		this.destination = i;
 	}
-
+	public PassagerStandard(int destination) {
+		this(PassagerStandard.class.toString()+destination, destination);
+	}
 	@Override
 	public String nom() {
 		// TODO Auto-generated method stub

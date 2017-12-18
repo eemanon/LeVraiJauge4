@@ -9,7 +9,7 @@ import tec.EtatPassager.Etat;
  *  
  * Les instances de cette classe sont des objets constants.
  */
-public class EtatPassagerChaine implements IEtatPassager{
+class EtatPassagerChaine implements IEtatPassager{
   /**
    * Définit les trois états possible d'un passager dans un transport.
    */
