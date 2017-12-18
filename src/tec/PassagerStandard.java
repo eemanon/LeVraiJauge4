@@ -63,7 +63,7 @@ public class PassagerStandard implements Passager, Usager{
 
 	@Override
 	public void monterDans(Transport t) throws UsagerInvalideException {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	@Override

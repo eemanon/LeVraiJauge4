@@ -50,8 +50,7 @@ public class PassagerStandardTest implements Transport{
 			p1.monterDans(ghostbus);
 			assert(!p1.estDehors());
 		} catch (UsagerInvalideException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Oh la honte! Le conducteur laisse pas monter Bernard malgré le fait que le bus est vide!");
 		}
 		PassagerStandard ghostbuster = new PassagerStandard("Benoit", 0);
 		FauxBusPlein ghostbus42 = new FauxBusPlein();
