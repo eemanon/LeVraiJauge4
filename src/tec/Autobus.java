@@ -29,7 +29,7 @@ public class Autobus implements Bus, Transport{
 	@Override
 	public void demanderPlaceDebout(Passager p) {
 		p.accepterPlaceDebout();
-		this.debout++;
+		this.debout++; 
 	}
 
 	@Override
