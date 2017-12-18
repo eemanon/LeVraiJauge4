@@ -20,7 +20,7 @@ public class PassagerStandard implements Passager, Usager{
 	public PassagerStandard(int destination) {
 		this(PassagerStandard.class.toString()+destination, destination);
 	}
-	@Override
+	@Override 
 	public String nom() {
 		return nom;
 	}
