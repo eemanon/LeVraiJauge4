@@ -3,9 +3,8 @@ package tec;
 import tec.EtatPassager.Etat;
 
 /**
- * Declaration d'un Passager, 
- * le nom est une chaine de  et la destination (numéro d'arret) un entier
- * un passager possède aussi un etat, initialisé à DEHORS
+ * Passager, contructeur avec le nom et la destination (numéro d'arret)
+ * 
  */
 
 public class PassagerStandard implements Passager, Usager{
