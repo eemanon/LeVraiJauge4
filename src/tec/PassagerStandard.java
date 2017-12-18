@@ -22,8 +22,7 @@ public class PassagerStandard implements Passager, Usager{
 	}
 	@Override
 	public String nom() {
-		// TODO Auto-generated method stub
-		return null;
+		return nom;
 	}
 
 	@Override
