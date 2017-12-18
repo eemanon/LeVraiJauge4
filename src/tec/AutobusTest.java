@@ -12,7 +12,7 @@ public class AutobusTest {
 	Autobus a2;
 	Autobus a3;
 	PassagerStandard p1;
-	PassagerStandard p2;
+	PassagerStandard p2; 
 	PassagerStandard p3;
 	
 	@Before
