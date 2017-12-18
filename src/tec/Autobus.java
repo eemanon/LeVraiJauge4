@@ -69,7 +69,7 @@ public class Autobus implements Bus, Transport{
 	@Override
 	public void demanderSortie(Passager p) {
 		EtatPassager etat = p.getEtat();
-		if(etat == DEBOUT)
+		if(etat == DEBOUT) 
 		    this.debout++;
 		else
 			this.assis++;
