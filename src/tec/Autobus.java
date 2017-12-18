@@ -13,8 +13,8 @@ public class Autobus implements Bus, Transport{
 	public Autobus(int i, int j) {
 		this.assis=i;
 		this.debout=j;
-		this.tailleMax = i+j
-		bus[]= new Passager[tailleMax];
+		this.tailleMax = i+j;
+		bus = new Passager[tailleMax];
 	}
  
 	@Override
@@ -22,32 +22,26 @@ public class Autobus implements Bus, Transport{
 		return this.assis>0;
 	}
 
-	@Override
+	@Override 
 	public boolean aPlaceDebout() {
 		return this.debout>0; 
 	}
   
 	@Override
 	public void demanderPlaceAssise(Passager p) {
-		EtatPassager etat = p.getEtat();
-		if(etat == DEHORS && bus.length<this.tailleMax) {
+		if(p.estDehors() && bus.length<this.tailleMax && this.aPlaceAssise()) {
 			this.bus[bus.length+1]=p;
-			if(this.aPlaceAssise()) {
-				p.accepterPlaceAssise();
-				this.assis--;
-			}
-		}	
-	}
+			p.accepterPlaceAssise();
+			this.assis--;
+		}
+	}	
 
 	@Override
 	public void demanderPlaceDebout(Passager p) {
-		EtatPassager etat = p.getEtat();
-		if(etat == DEHORS) {
+		if(p.estDehors() && bus.length<this.tailleMax && this.aPlaceDebout()) {
 			this.bus[bus.length+1]=p;
-			if(this.aPlaceDebout()) {
-				p.accepterPlaceDebout();
-				this.debout--; 
-			}
+			p.accepterPlaceDebout();
+			this.debout--; 
 		}	
 		
 	}
@@ -68,8 +62,7 @@ public class Autobus implements Bus, Transport{
 
 	@Override
 	public void demanderSortie(Passager p) {
-		EtatPassager etat = p.getEtat();
-		if(etat == DEBOUT) 
+		if(p.estDebout()) 
 		    this.debout++;
 		else
 			this.assis++;
