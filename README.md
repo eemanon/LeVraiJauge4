@@ -29,3 +29,8 @@ vérifié
 
 # 2 Deuxième Iteration: Instancation et Changement d'état
 Méthodes toString implémenté pour Autobus et PassagerStandard
+
+## 2.1 Cohérence des états après instanciation
+Pour vérifier la cohérence des états après instanciation il suffit de tester un seul passager. Son état est Dehors lors de son initialisation (selon la spécification dans l'interface).
+
+Pour vérifier le changement des états on peut revérifier son état après chaque appel de modificateur.

@@ -14,9 +14,13 @@ public class EtatPassager implements IEtatPassager{
                     /** passager debout à l'intérieur */ DEBOUT,  
                     /** passager à l'extérieur */        DEHORS};
 
-  private final Etat monEtat;
+  private Etat monEtat;
 
-  /**
+  public void setMonEtat(Etat monEtat) {
+	this.monEtat = monEtat;
+}
+
+/**
    * Construit une instance en précisant l'état du passager.
    * 
    * @param e  valeur de l'état.
@@ -30,11 +34,11 @@ public class EtatPassager implements IEtatPassager{
   }
   
   //FACTORY
-  public EtatPassager creerEtatPassager(Etat e) {
+  public static EtatPassager creerEtatPassager(Etat e) {
 	  return new EtatPassager(e);
   }
   
-  public EtatPassagerChaine creetEtatPassager(String etat) {
+  public static EtatPassagerChaine creetEtatPassager(String etat) {
 	  return new EtatPassagerChaine(etat);
   }
 
