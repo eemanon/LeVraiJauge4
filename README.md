@@ -41,3 +41,7 @@ Pour vérifier le changement des états on peut revérifier son état après chaque a
 La condition à laquelle une instance de FauxPassager peut être remplacé par une instance de PassagerStandard est la suivante:
 Elle doit implementer les mêmes interfaces.
 
+## 3.2 Ordre des tests
+Ehm... On initialise un et lui met parametre. Après il est passé en référence.
+
+
