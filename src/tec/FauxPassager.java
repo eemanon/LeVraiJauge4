@@ -1,6 +1,9 @@
 package tec;
 
-
+/**
+ * Cette classe est un substitut de passager pour tester la classe autobus.
+ * son utilite se justifie par le fait qu'elle enlève les erreurs liées au code de passager
+ */
 
 class FauxPassager implements Passager { 
   static final byte DEHORS = 0;

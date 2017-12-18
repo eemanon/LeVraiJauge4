@@ -2,6 +2,11 @@ package tec;
 
 import tec.EtatPassager.Etat;
 
+/**
+ * Passager, contructeur avec le nom et la destination (numéro d'arret)
+ * 
+ */
+
 public class PassagerStandard implements Passager, Usager{
 	private EtatPassager etat;
 	private String nom;

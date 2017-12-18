@@ -1,5 +1,8 @@
 package tec;
-
+/**
+ * interface pour lier entre elles les classes passagers.
+ * 
+ */
 public interface IEtatPassager {
 	 public boolean estExterieur();
 	 public boolean estAssis();
