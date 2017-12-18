@@ -12,8 +12,6 @@ public class PassagerStandardTest implements Transport{
 	
 	@Before
 	public void initialiser() throws Exception{
-		
-		
 	}
 	
 	@After
