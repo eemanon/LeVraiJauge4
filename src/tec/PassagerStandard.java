@@ -1,12 +1,14 @@
 package tec;
 
+import tec.EtatPassager.Etat;
+
 public class PassagerStandard implements Passager, Usager{
 	private EtatPassager etat;
 	private String nom;
 	private int destination;
 	
 	public PassagerStandard(String string, int i) {
-		// TODO Auto-generated constructor stub
+		etat = EtatPassager.creerEtatPassager(Etat.DEHORS);
 	}
 
 	@Override
@@ -17,37 +19,39 @@ public class PassagerStandard implements Passager, Usager{
 
 	@Override
 	public boolean estDehors() {
-		// TODO Auto-generated method stub
+		if (etat.estExterieur())
+			return true;
 		return false;
 	}
 
 	@Override
 	public boolean estAssis() {
-		// TODO Auto-generated method stub
+		if(etat.estAssis())
+			return true;
 		return false;
 	}
 
 	@Override
 	public boolean estDebout() {
-		// TODO Auto-generated method stub
+		if(etat.estDebout())
+			return true;
 		return false;
 	}
 
 	@Override
 	public void accepterSortie() {
-		// TODO Auto-generated method stub
-		
+		etat.setMonEtat(Etat.DEHORS);
 	}
 
 	@Override
 	public void accepterPlaceAssise() {
-		// TODO Auto-generated method stub
+		etat.setMonEtat(Etat.ASSIS);
 		
 	}
 
 	@Override
 	public void accepterPlaceDebout() {
-		// TODO Auto-generated method stub
+		etat.setMonEtat(Etat.DEBOUT);
 		
 	}
 
