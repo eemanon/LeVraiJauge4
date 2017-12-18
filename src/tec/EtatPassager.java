@@ -10,9 +10,9 @@ public class EtatPassager implements IEtatPassager{
   /**
    * Définit les trois états possible d'un passager dans un transport.
    */
-  public enum Etat {/** passager assis à l'intérieur */  ASSIS, 
-                    /** passager debout à l'intérieur */ DEBOUT,  
-                    /** passager à l'extérieur */        DEHORS};
+  public enum Etat {/** passager assis à l'intérieur */  assis, 
+                    /** passager debout à l'intérieur */ debout,  
+                    /** passager à l'extérieur */        dehors};
 
   private Etat monEtat;
 
@@ -49,7 +49,7 @@ public class EtatPassager implements IEtatPassager{
    * @return vrai si instanciation avec DEHORS;
    */
   public boolean estExterieur() {
-    return this.monEtat==Etat.DEHORS;
+    return this.monEtat==Etat.dehors;
   }
 
   /**
@@ -58,7 +58,7 @@ public class EtatPassager implements IEtatPassager{
    * @return vrai si instanciation avec ASSIS;
    */
   public boolean estAssis() {
-    return monEtat == Etat.ASSIS;
+    return monEtat == Etat.assis;
   }
 
   /**
@@ -67,7 +67,7 @@ public class EtatPassager implements IEtatPassager{
    * @return vrai si instanciation avec DEBOUT;
    */
   public boolean estDebout() {
-    return this.monEtat == Etat.DEBOUT;
+    return this.monEtat == Etat.debout;
   }
 
   /**
@@ -76,7 +76,7 @@ public class EtatPassager implements IEtatPassager{
    * @return vrai si instanciation avec ASSIS ou DEBOUT.
    */
   public boolean estInterieur() {
-    return this.monEtat != Etat.DEHORS;
+    return this.monEtat != Etat.dehors;
   }
 
 

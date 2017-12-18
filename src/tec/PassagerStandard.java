@@ -8,7 +8,7 @@ public class PassagerStandard implements Passager, Usager{
 	private int destination;
 	
 	public PassagerStandard(String string, int i) {
-		etat = EtatPassager.creerEtatPassager(Etat.DEHORS);
+		etat = EtatPassager.creerEtatPassager(Etat.dehors);
 		this.nom = string;
 		this.destination = i;
 	}
@@ -42,18 +42,18 @@ public class PassagerStandard implements Passager, Usager{
 
 	@Override
 	public void accepterSortie() {
-		etat.setMonEtat(Etat.DEHORS);
+		etat.setMonEtat(Etat.dehors);
 	}
 
 	@Override
 	public void accepterPlaceAssise() {
-		etat.setMonEtat(Etat.ASSIS);
+		etat.setMonEtat(Etat.assis);
 		
 	}
 
 	@Override
 	public void accepterPlaceDebout() {
-		etat.setMonEtat(Etat.DEBOUT);
+		etat.setMonEtat(Etat.debout);
 		
 	}
 
